@@ -1,0 +1,356 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <Title id="title">Heybrook Cafe</Title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+
+    </head>
+
+<style>
+
+    videoplayer {
+    width: 100%    !important;
+    height: auto   !important;
+    }
+
+    videodiv { 
+        padding: 0;
+        margin: 0;
+        display: block;
+    } 
+
+
+    .dark_bg {
+        background-color: rgb(184,88,72);
+    }
+
+    .black_bg {
+        background-color: black;
+    }
+
+    .light_bg {
+        background-color: rgb(238,214,210);
+    }
+
+    .transparency{ 
+        background-color: rgba(184,88,72, 0.5);
+    }
+
+    .light_txt {
+        color: white;
+    }
+
+    .dark_text {
+        color :  rgb(184,88,72);
+    }
+
+    .body {
+        width: 100%; 
+    }
+
+    .strong_text{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .heybrook-image{
+        height:250; 
+        width:100%
+    }
+    
+    .image_banner{
+        background-repeat: no-repeat;
+        background-image : url('public/images/Heybrook Sunset.JPG');
+        background-size : cover;
+        background-position: center;
+        width: 100%;
+    }
+
+    .large_text{
+        font-size: 16px;
+    }
+ 
+    #navbar{
+        font-size: 12px;
+    }
+
+    #videoplayer{
+        padding: 0 ;
+    }
+
+    .videoswimlane{
+         
+    }
+
+    .videoitem{
+        padding: 10px, 30px;
+        width: auto;
+
+    }
+    .imbox{
+            width: 100%; 
+            padding: 10% 0px;
+        
+            
+            
+    }
+
+
+    
+
+    @media only screen and (min-width: 600px){
+    /* CSS overrides */
+
+        #navbar{
+            font-size: 24px;
+        }
+        .large_text{
+            font-size: 32px;   
+
+        }
+        .image_banner{
+            background-repeat: no-repeat;
+            background-image : url('public/images/Heybrook Sunset letter Box.jpg');
+            background-size : cover;
+            width: 100%;
+        }
+        .heybrook-image{
+            height:300; 
+            width:100%
+        }
+
+    }
+
+    
+    @media only screen and (min-width: 1024px){
+    /* CSS overrides */
+    }
+ 
+    
+    @media only screen and (min-width: 1366px){
+    /* CSS overrides */
+        .body{
+            width : 1366px;
+            margin: 0 auto;
+            background-color: rgb(238,214,210);
+        }
+    } 
+</style>
+
+<body class="body">
+ 
+     <!-- navbar -->
+    <div id="navbar" class="w3-bar dark_bg light_txt large_text" >
+        <div class="w3-bar-item light_bg dark_text w3-mobile " style="font-weight:bolder"> Heybrook Cafe :    </div>
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Al</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Ian</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile">Steve</a>
+    </div>
+
+    <!-- Artist identifier and image -->
+    <div class="w3-display-container image_banner" >
+        <div class= "heybrook-image"> </div>
+        <div class="w3-display-bottomright transparency w3-text-white large_text" style="width:100%; text-align: center;">Al Shalliker</div>     
+    </div >
+
+    <div id="vsl" class="w3-row dark_bg ">       
+        <div class="w3-col " style="width: 1%"> &nbsp </div>
+
+        <div id="imleft" class="w3-col " style="width: 6.25%">
+            <img src="public/images/arrow_lt(3).jpg" class="imbox" style="padding: 20% 0"></div>  
+    
+        <div class="w3-col " style="width: 1.5%"> &nbsp </div>
+        <div  class="w3-col " style="width: 12.5%"><img id="im0" src="public/images/videos/Levellers.jpg" class="imbox"></div>
+        <div class="w3-col " style="width: 1.5%"> &nbsp </div>   
+        <div  class="w3-col " style="width: 12.5%"><img id="im1" src="public/images/videos/Levellers.jpg" class="imbox"></div>
+        <div class="w3-col " style="width: 1.5%"> &nbsp </div>
+        <div class="w3-col " style="width: 12.5%"><img id= "im2" src="public/images/videos/Onewayoflife.jpg" class="imbox"></div>  
+        <div class="w3-col " style="width: 1.5%"> &nbsp </div>
+        <div class="w3-col " style="width: 12.5%"><img id="im3" src="public/images/videos/Levellers.jpg" class="imbox"></div>    
+        <div class="w3-col " style="width: 1.5%"> &nbsp </div>
+        <div class="w3-col " style="width: 12.5%"><img id="im4" src="public/images/videos/Levellers.jpg" class="imbox"></div>    
+        <div class="w3-col " style="width: 1.5%"> &nbsp </div>
+        <div class="w3-col " style="width: 12.5%"><img id="im5" src="public/images/videos/Onewayoflife.jpg" class="imbox"></div>  
+        <div  class="w3-col " style="width: 1.5%"> &nbsp </div>
+        <div id="imright" class="w3-col " style="width: 6.25%">
+            <img src="public/images/arrow_rt(3).jpg" class="imbox" style="padding: 20% 0"></div>    
+    </div>
+
+
+    <!-- You tube player -->
+    <div dark_bg>
+
+        <videodiv id="videocontainer" class="dark_bg">
+             <!-- <iframe id="videoplayer" width="640" height="360" src="//www.youtube.com/embed/aqz-KE-bpKQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </videodiv>
+
+            <!-- <iframe id="videoplayer" width="640" height="360" src="//www.youtube.com/embed/aqz-KE-bpKQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+           <!-- <iframe width="549" height="412" src="//www.youtube.com/embed/2slWp3l4WP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </figure> -->
+           <!-- <iframe id="videoplayer" width="549" height="412" src="//www.youtube.com/embed/QK4rqLor3MU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  
+    </div>
+</body>
+
+<script>
+
+//main code
+
+var videos = new Array;
+var vsl = new Array;
+
+vslCount = 6;
+vslPos = 0;
+
+vidRatio = 1;
+vidWidth = 600;
+
+initvideo();  
+loadVideoSwimlane(1) ;
+
+function loadvideodata()
+{
+    var video = { imageSrc:  "public/images/videos/Onewayoflife.jpg", 
+                embedCode: '<iframe width="661" height="372" src="//www.youtube.com/embed/r7ONdAjGtrw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+         }   
+    videos.push(video);
+    var video = { imageSrc:  "public/images/videos/Levellers.jpg", 
+                embedCode: '<iframe id="videoplayer" width="549" height="412" src="//www.youtube.com/embed/QK4rqLor3MU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',            
+        }
+    videos.push(video);
+    var video = { imageSrc:  "public/images/videos/MouthToMouth.jpg", 
+                embedCode: '<iframe width="661" height="529" src="//www.youtube.com/embed/eAwTz1cS4CA?list=PLnX8z-XfWahCLbs0V5qvXW-yDlx7MsMK9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        }
+    videos.push(video);
+    var video = { imageSrc:  "public/images/videos/Onewayoflife.jpg", 
+                embedCode: '<iframe width="661" height="372" src="https://www.youtube.com/embed/13DknmiCstM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+ 
+            }
+    videos.push(video);
+    var video = { imageSrc:  "public/images/videos/ZeightGeist.jpg", 
+                embedCode: '<iframe width="661" height="372" src="//www.youtube.com/embed/BFRmr3YKNyU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        }
+    videos.push(video);
+}
+
+function loadVideoSwimlane(dir)
+{
+    for(var i=0;i<vslCount;i++)
+    {
+        vsl[i].video = videos[vslPos];
+        vsl[i].element.src = vsl[i].video.imageSrc;
+        vslPos += dir;
+        if(vslPos >= videos.length) {vslPos-=videos.length }
+        if(vslPos < 0 ) {vslPos+=videos.length }
+    }
+}
+
+
+function initvideo()
+{
+    // get the images from the routine that defines them.  later this should be jason.
+    loadvideodata();
+
+    // create the array of video elements for the swimlane by putting a dummy item in it
+    var videoElement = { element: document.getElementById("im0"),
+                         video: videos[0]
+                         }
+    vsl.push(videoElement);
+    var videoElement = { element: document.getElementById("im1"),
+                         video: videos[1] }
+    vsl.push(videoElement);
+    var videoElement = { element: document.getElementById("im2"),
+                         video: videos[2] }
+    vsl.push(videoElement);
+    var videoElement = { element: document.getElementById("im3"),
+                         video: videos[3] }
+    vsl.push(videoElement);
+    var videoElement = { element: document.getElementById("im4"),
+                         video: videos[4] }
+    vsl.push(videoElement);
+    var videoElement = { element: document.getElementById("im5"),
+                         video: videos[5] }
+    vsl.push(videoElement);
+
+    // attach events to left and right arrow
+    document.getElementById("imleft").addEventListener("click", function() { loadVideoSwimlane(-1) });
+    document.getElementById("imright").addEventListener("click", function() { loadVideoSwimlane(1) });
+
+    //attach event listeners for the swimlane items
+    document.getElementById("im0").addEventListener("click", function() { loadVideo(0) });
+    document.getElementById("im1").addEventListener("click", function() { loadVideo(1) });
+    document.getElementById("im2").addEventListener("click", function() { loadVideo(2) });
+    document.getElementById("im3").addEventListener("click", function() { loadVideo(3) });
+    document.getElementById("im4").addEventListener("click", function() { loadVideo(4) });
+    document.getElementById("im5").addEventListener("click", function() { loadVideo(5) });
+
+    //load the first video
+    loadVideo(0);
+
+}
+
+var aspect;
+
+function loadVideo(n)
+{
+    document.getElementById("videocontainer").innerHTML = vsl[n].video.embedCode;
+
+        $(function() {
+
+    var $allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com'], iframe[src^='https//www.youtube.com'], object, embed"),
+    $fluidEl = $("videodiv");
+
+    $allVideos.each(function() {
+
+        $(this)
+            // jQuery .data does not work on object/embed elements
+            .attr('data-aspectRatio', this.height / this.width)
+            .removeAttr('height')
+            .removeAttr('width');
+
+            var aspect = this.height / this.width;
+            
+        
+
+    });
+
+    $(window).resize(function() {
+
+    document.getElementById("videocontainer").style="padding: 0 ";
+    var targetHeight = 400;
+    var newWidth = 600;
+    var newHeight = 300;
+    var marg = 0;
+
+    //console.log(newWidth+" "+newHeight);
+
+    $allVideos.each(function() {
+        var $el = $(this);
+
+            newWidth = $fluidEl.width();
+            newHeight = newWidth * $el.attr('data-aspectRatio');
+            if (newHeight > targetHeight)
+            {
+                newHeight = targetHeight;
+                newWidth = targetHeight / $el.attr('data-aspectRatio');  
+            }
+            marg = ($fluidEl.width()-newWidth)/2;
+
+        $el
+            .width(newWidth)
+            .height(newHeight)
+         //   console.log("resize "+ $el.width() +" " + $el.height() + " " + $el.attr('data-aspectRatio') +" " + marg );
+
+        });
+        document.getElementById("videocontainer").style="padding: 0 "  + marg;
+    }).resize();
+
+    });
+ 
+}
+
+</script>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <Title id="title">Heybrook Cafe</Title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>    
+    </head>
+
+<style>
+    .dark_bg {
+        background-color: rgb(184,88,72);
+    }
+
+    .black_bg {
+        background-color: black;
+    }
+
+    .light_bg {
+        background-color: rgb(238,214,210);
+    }
+
+    .light_txt {
+        color: white;
+    }
+
+    .dark_text {
+        color : black;
+    }
+
+    .bigbanner{
+        border-width: 0px;
+        margin : 0px;
+        padding :0.5rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .smbanner{
+        border-width: 0px;
+        margin : 0px;
+        padding :0.01rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .navb{
+        list-style:none;
+        margin:0;
+        text-align:center;
+    }
+
+
+    .navb li{
+        display:inline;
+    }
+    .navb a{
+        display:inline-block;
+        padding:0.1em 1em 0;
+        color: white;
+    }
+
+    .navb li :hover{
+        background-color: white;
+        color: black;
+    }
+
+    /* Video player */
+
+    .video {
+        box-sizing:border-box;
+        display:block;
+        background-color:  black;
+        /* padding: 1px 50px 50px; */
+    }
+
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 33.75%; /* 16:9 */
+        padding-top: 0;
+        height: 0;
+    }
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        width: 60%;
+        height: 100%;
+    }
+
+    /* Responsive CSS */
+
+    @media screen and (max-width: 622px) {
+        .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        padding-right : 0px;
+        padding-left : 0px;
+        height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        
+       }
+    }
+
+</style>
+
+<body>
+<div id = title class = " light_txt dark_bg bigbanner">
+    Heybrook Cafe
+</div>
+
+<ul class="navb black_bg light_txt">
+    <li><a href="#">Al</a></li>
+    <li><a href="#">Ian</a></li>
+    <li><a href="#">Steve</a></li>
+    <li><a href="#">Shallykids</a></li>
+</ul>
+
+<div class=""> 
+    <img id="heybrook banner" src="public\images\Blue Bay Letter Box.jpg" alt="heybrook bay image" style="width:100%">
+</div>
+
+<div id="artist name" class = "smbanner black_bg light_txt">
+    Al Shalliker
+</div>
+
+<div class="video" id="video">
+
+        <!-- 
+        <iframe width="420" height="315"
+           src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+        </iframe> -->
+        <div class="videoWrapper">
+                <!-- <iframe class="videoContainer__video" width="1920" height="1080" 
+                src="https://youtu.be/13DknmiCstM" 
+                frameborder="0"></iframe>    -->
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/13DknmiCstM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>               
+        </div>                    
+</div>
+<div id="vidlib" class="dark_bg container">
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+<footer>
+
+</footer>
+
+<script>
+
+// define the images
+pic_banner_source = "public/images/Heybrook Sunset letter Box.jpg"
+
+
+
+</script>
+
+
+
+
+
+
