@@ -92,8 +92,7 @@
 
     .videoitem{
         padding: 10px, 30px;
-        width: auto;
-
+        
     }
     .imbox{
             width: 100%; 
@@ -236,8 +235,13 @@
 <div id="Eli" class="w3-cell-row ">
 
         <div class="w3-container dark_bg w3-cell w3-mobile">
-            <img id="AudioImage" src ="public/cds/Al/eli wallach/Eli.jpg" style = "padding: 5%; width: 100%"></img>        
+            <img id="AudioImage" src ="public/cds/Al/eli wallach/Eli.jpg" style = "padding: 5% 5% 0px 5%; width: 100%;  "></img>        
+            <div class = "w3-display-container" style="height: 100px; ">
+                <audio id="audioc" autoplay controls class="w3-display-middle" ></audio>
+            </div>
         </div>
+        
+
       
         <div class="w3-container dark_bg w3-cell w3-mobile" style="width:50%; padding:2.5% 2.5% 2.5% 2.5%">
             <div id="AudioTracks" class ="light_bg w3-border-0" style="padding: 0px;">
@@ -282,10 +286,11 @@ var cds = new Array;
 var asl = new Array;
 
 
-vslCount = 6;
-vslPos = 0;
-aslPos = 0;
-aslCount = 6;
+var vslCount = 6;
+var vslPos = 0;
+var aslPos = 0;
+var aslCount = 6;
+
 
 vidRatio = 1;
 vidWidth = 600;
@@ -487,6 +492,10 @@ function initaudio()
     //load the first video
     loadAudio(0);
 
+    //add event listener to the album image
+    document.getElementById("AudioImage").addEventListener("click", function() { playSong(0) });
+    
+
 }
 
 function loadaudiodata(){
@@ -611,29 +620,63 @@ function loadAudioSwimlane(dir)
     }
 }
 
+var selectedcd;
+
 function loadAudio(n){
-    console.log(n);
-    console.log(asl[n]);
+    // console.log(n);
+    // console.log(asl[n]);
+
+    selectedcd = asl[n].cd.tracks;
+    console.log("selected cd");
+    console.log(selectedcd);
 
     document.getElementById("audio editorial").innerHTML =asl[n].cd.editorial;
     document.getElementById("AudioImage").src =  asl[n].cd.imageSrc;
     
-    t =  '<ul class="w3-ul w3-card-4 w3-border"> ';
-    console.log(t);
+    t =  '<ul class="w3-ul w3-card-4 w3-border w3-hoverable"> ';
 
-    console.log(asl[n].cd.tracks.length);
+    console.log("ev",asl[n].cd.tracks.length);
 
     for (var i=0; i<asl[n].cd.tracks.length;i++){
-        t += '<Li>';
-        if (asl[n].cd.tracks.number <10){t+='0';}
+     //   t += '<li id = "sli' + i + '" >';
+        t += '<li onclick = "playSong(' + i +') "> ';
+        if (i <10){ t+='0';}
         t+= asl[n].cd.tracks[i].number;
         t+=' : ';
         t+= asl[n].cd.tracks[i].name;
-        t+='</li>';
-        console.log(t);
-    }
+        t+='</li> ';
+      
+    }     
+    console.log(t);
     document.getElementById("AudioTracks").innerHTML =  t;
+ }
 
+var playingcd = 0;
+var playingsong = 0;
+
+
+function playSong(n, id)
+{
+    playingsong = n;
+    playingcd = selectedcd;
+ 
+    console.log("ps selected cd")
+    console.log(n,id);
+    console.log(selectedcd);
+    document.getElementById("audioc").src = selectedcd[n].audio;
+
+    var aud = document.getElementById("audioc");
+    aud.onended = function() {
+    nextSong()};
+}
+
+
+
+
+function nextSong()
+{
+    playingsong++;
+    if (playingsong<selectedcd.length) document.getElementById("audioc").src = selectedcd[playingsong].audio;
 
 }
 
