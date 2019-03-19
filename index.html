@@ -288,22 +288,24 @@ vidRatio = 1;
 vidWidth = 600;
 
 initvideo();  
-loadVideoSwimlane(1) ;
+loadVideoSwimlane(0) ;
 
 initaudio();
-loadAudioSwimlane(1);
+loadAudioSwimlane(0);
 
 
 
 function loadVideoSwimlane(dir)
 {
+    vslPos += dir;
+    if(vslPos >= videos.length) {vslPos-=videos.length }
+    if(vslPos < 0 ) {vslPos+=videos.length }
+
     for(var i=0;i<vslCount;i++)
     {
-        vsl[i].video = videos[vslPos];
+        vsl[i].video = videos[(vslPos+i) %videos.length ];
         vsl[i].element.src = vsl[i].video.imageSrc;
-        vslPos += dir;
-        if(vslPos >= videos.length) {vslPos-=videos.length }
-        if(vslPos < 0 ) {vslPos+=videos.length }
+    
     }
 }
 
@@ -485,6 +487,44 @@ function initaudio()
 }
 
 function loadaudiodata(){
+    
+    
+    
+    // New Songs
+    {
+        let cd = {key: "New", name:"New Songs", tracks: new Array, imageSrc: "public/cds/Al/NewSongs/New Songs.jpg",
+        editorial: "The latest and newest work" }
+    
+        cd.tracks.push({number: 1, name: "New Song 1", audio: "public/cds/Al/eli wallach/sample.mp3"});
+        console.log(cd.tracks);
+
+        cd.tracks.push( {number: 2, name: "New Song 2", audio: "public/cds/Al/eli wallach/sample.mp3"});
+        //tracks.push(track);
+
+        var track = {number: 3, name: "New Song 3", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        cd.tracks.push(track);
+        
+        cds.push(cd);
+    }
+
+        // New From Old
+        {
+        let cd = {key: "New", name:"New From Old", tracks: new Array, imageSrc: "public/cds/Al/NewFromOld/Blue Heybrook Bay.jpg",
+        editorial: "Classic watershed songs re-recorded and reinterpreted" }
+    
+        cd.tracks.push({number: 1, name: "Old Song 1", audio: "public/cds/Al/eli wallach/sample.mp3"});
+        console.log(cd.tracks);
+
+        cd.tracks.push( {number: 2, name: "Old Song 2", audio: "public/cds/Al/eli wallach/sample.mp3"});
+        //tracks.push(track);
+
+        var track = {number: 3, name: "Old Song 3", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        cd.tracks.push(track);
+        
+        cds.push(cd);
+    }
+
+
     // Eyes of eli Wallach
     {
         let cd = {key: "Eli", name:"The Eyes Of Eli Wallach", tracks: new Array, imageSrc: "public/cds/Al/eli wallach/Eli.jpg",
@@ -556,13 +596,15 @@ function loadaudiodata(){
 
 function loadAudioSwimlane(dir)
 {
-    for(var i=0;i<aslCount;i++)
+    aslPos += dir;
+    if(aslPos >= cds.length) {aslPos-=cds.length }
+    if(aslPos < 0 ) {aslPos+=cds.length }
+
+    for(var i=0;i< aslCount;i++)
     {
-        asl[i].cd = cds[aslPos];
+        asl[i].cd = cds[(aslPos+i) % cds.length ];
         asl[i].element.src = asl[i].cd.imageSrc;
-        aslPos += dir;
-        if(aslPos >= cds.length) {aslPos-=cds.length }
-        if(aslPos < 0 ) {aslPos+=cds.length }
+    
     }
 }
 
