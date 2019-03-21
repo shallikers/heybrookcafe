@@ -150,8 +150,7 @@
     <div id="navbar" class="w3-bar dark_bg light_txt large_text" >
         <div class="w3-bar-item light_bg dark_text  " style="font-weight:bolder"> Heybrook Cafe :    </div>
         <a href="#" class="w3-bar-item w3-button">Al</a>
-        <a href="#" class="w3-bar-item w3-button ">Ian</a>
-        <a href="#" class="w3-bar-item w3-button ">Steve</a>
+        <a href="Sam.html" class="w3-bar-item w3-button ">Sam</a>
     </div>
 
     <!-- Artist identifier and image -->
@@ -424,31 +423,20 @@ function loadVideo(n)
 
 function loadvideodata()
 {
-    var video = { imageSrc:  "public/images/videos/Onewayoflife.jpg", 
-                embedCode: '<iframe width="661" height="372" src="//www.youtube.com/embed/r7ONdAjGtrw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-                editorial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-         }   
-    videos.push(video);
-    var video = { imageSrc:  "public/images/videos/Early Watershed.jpg", 
+  
+    var video = { imageSrc:  "public/Al/videos/Early Watershed.jpg", 
                 embedCode: '<iframe id="videoplayer" width="549" height="412" src="//www.youtube.com/embed/QK4rqLor3MU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',            
                 editorial: 'One of the very few videos of the original Watershed.  We were so much younger then we are older than that now '
         }
     videos.push(video);
-    var video = { imageSrc:  "public/images/videos/MouthToMouth.jpg", 
-                embedCode: '<iframe width="661" height="529" src="//www.youtube.com/embed/eAwTz1cS4CA?list=PLnX8z-XfWahCLbs0V5qvXW-yDlx7MsMK9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-                editorial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        }
-    videos.push(video);
-    var video = { imageSrc:  "public/images/videos/DaveGregMem Take Me With You.jpg", 
+
+    var video = { imageSrc:  "public/Al/videos/DaveGregMem Take Me With You.jpg", 
                 embedCode: '<iframe width="661" height="372" src="//www.youtube.com/embed/13DknmiCstM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
                 editorial: 'Filmed live at the Thistle in Plymouth in memorial of Dave Gregory'
             }
     videos.push(video);
-    var video = { imageSrc:  "public/images/videos/ZeightGeist.jpg", 
-                embedCode: '<iframe width="661" height="372" src="//www.youtube.com/embed/BFRmr3YKNyU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-                editorial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            }
-    videos.push(video);
+ 
+
 }
 
 function initaudio()
@@ -498,112 +486,171 @@ function initaudio()
 
 }
 
-function loadaudiodata(){
-    
-    
-    
+function loadaudiodata(){    
+     
     // New Songs
-    {
+/*     {
         let cd = {key: "New", name:"New Songs", tracks: new Array, imageSrc: "public/cds/Al/NewSongs/New Songs.jpg",
         editorial: "The latest and newest work" }
     
         cd.tracks.push({number: 1, name: "New Song 1", audio: "public/cds/Al/eli wallach/sample.mp3"});
         console.log(cd.tracks);
-
-        cd.tracks.push( {number: 2, name: "New Song 2", audio: "public/cds/Al/eli wallach/sample.mp3"});
-        //tracks.push(track);
-
-        var track = {number: 3, name: "New Song 3", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
         
         cds.push(cd);
-    }
+    } */
 
-        // New From Old
+    // Bootlegs
         {
-        let cd = {key: "New", name:"New From Old", tracks: new Array, imageSrc: "public/cds/Al/NewFromOld/Blue Heybrook Bay.jpg",
-        editorial: "Classic watershed songs re-recorded and reinterpreted" }
-    
-        cd.tracks.push({number: 1, name: "Old Song 1", audio: "public/cds/Al/eli wallach/sample.mp3"});
-        console.log(cd.tracks);
-
-        cd.tracks.push( {number: 2, name: "Old Song 2", audio: "public/cds/Al/eli wallach/sample.mp3"});
-        //tracks.push(track);
-
-        var track = {number: 3, name: "Old Song 3", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
+            let cd = {key: "Bootlegs", name:"Bootlegs", tracks: new Array, imageSrc: "public/Al/cds/Bootlegs/Pictures 121.jpg",
+            editorial: "Covers and bootlegs." }
         
+            cd.tracks.push({number: 1, name: "Bootleg of Hopeless Heart", audio: "public/Al/cds/Bootlegs/Hopeless 5.mp3"});
+            console.log(cd.tracks);
+            
+            cds.push(cd);
+        } 
+ 
+
+    {
+        let cd = {key: "Moves", name:"Moves", tracks: new Array, imageSrc: "public/Al/cds/Moves/Moves - cropped image.jpg",
+        editorial: "Watershed 1994" }
+    
+        // Moves
+        cd.tracks.push({number: 1, name: "Judgement Level", audio: "public/Al/cds/Moves/01 JUDGEMENT LEVEL.mp3"});
+
+        var track = {number: 2, name: "Tomorrow Never Comes", audio: "public/Al/cds/Moves/02 TOMORROW NEVER COMES.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 3, name: "Nothing Moves Gently", audio: "public/Al/cds/Moves/03 NOTHING MOVES GENTLY.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 4, name: "I'll take you with me", audio: "public/Al/cds/Moves/04 I'LL TAKE YOU WITH ME.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 5, name: "Shift the balance", audio: "public/Al/cds/Moves/05 SHIFT THE BALANCE.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 6, name: "Easy come, easy go", audio: "public/Al/cds/Moves/06 EASY COME, EASY GO.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 7, name: "Feeling weird", audio: "public/Al/cds/Moves/07 FEELING WEIRD.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 8, name: "Spirit of man", audio: "public/Al/cds/Moves/08 SPIRIT OF MAN.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 9, name: "I remember you", audio: "public/Al/cds/Moves/09 I REMEMBER YOU.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 10, name: "Crusin' in contours", audio: "public/Al/cds/Moves/10 CRUISIN' IN CONTOURS.mp3"}
+        cd.tracks.push(track); 
+        var track = {number: 11, name: "Friendship and life", audio: "public/Al/cds/Moves/11 FRIENDSHIP AND LIFE.mp3"}
+        cd.tracks.push(track); 
+        var track = {number: 12, name: "Living in the gap", audio: "public/Al/cds/Moves/12 LIVING IN THE GAP.mp3"}
+        cd.tracks.push(track); 
+
+        cds.push(cd);
+    }
+    {
+        // Strange Days And Dynamite
+        let cd = {key: "StrangeDays", name:"Strange Days And Dynamite", tracks: new Array, imageSrc: "public/Al/cds/StrangeDaysAndDynamite/Strange Days And Dynamite - cropped image.jpg",
+        editorial: "Watershed 2002" }
+
+        cd.tracks.push({number: 1, name: "Baby your a liar", audio: "public/Al/cds/StrangeDaysAndDynamite/01 Baby You're A Liar.mp3"});
+
+        var track = {number: 2, name: "You", audio: "public/Al/cds/StrangeDaysAndDynamite/02 You.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 3, name: "The look of a hologram", audio: "public/Al/cds/StrangeDaysAndDynamite/03 The Look Of A Hologram.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 4, name: "Takeme high, take me low", audio: "public/Al/cds/StrangeDaysAndDynamite/04 Take Me High,Take Me Low.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 5, name: "Plymouth song", audio: "public/Al/cds/StrangeDaysAndDynamite/05 Plymouth Song.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 6, name: "Every time", audio: "public/Al/cds/StrangeDaysAndDynamite/06 Everytime.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 7, name: "Bird", audio: "public/Al/cds/StrangeDaysAndDynamite/07 Bird.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 8, name: "Strange days", audio: "public/Al/cds/StrangeDaysAndDynamite/08 Strange Days.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 9, name: "Meet me in the morning", audio: "public/Al/cds/StrangeDaysAndDynamite/09 Meet Me In The Morning.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 10, name: "Words so far", audio: "public/Al/cds/StrangeDaysAndDynamite/10 Words So Far Apart.mp3"}
+        cd.tracks.push(track); 
+        var track = {number: 11, name: "Friendship and life", audio: "public/Al/cds/StrangeDaysAndDynamite/11 Friendship And Life 1.mp3"}
+        cd.tracks.push(track); 
         cds.push(cd);
     }
 
 
-    // Eyes of eli Wallach
     {
-        let cd = {key: "Eli", name:"The Eyes Of Eli Wallach", tracks: new Array, imageSrc: "public/cds/Al/eli wallach/Eli.jpg",
-        editorial: "Eli Wallach Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." }
+        let cd = {key: "CitizenHotel", name:"The Citizen Hotel", tracks: new Array, imageSrc: "public/Al/cds/TheCitizenHotel/The Citizen Hotel - cropped image.jpg",
+        editorial: "Al Shalliker 2010." }
+
+
+        cd.tracks.push({number: 1, name: "Plymouth song", audio: "public/Al/cds/TheCitizenHotel/01 Plymouth Song 1.mp3"});
+
+        var track = {number: 2, name: "Strange days", audio: "public/Al/cds/TheCitizenHotel/02 Strange Days 1.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 3, name: "Never goes away", audio: "public/Al/cds/TheCitizenHotel/03 Never Goes Away 1.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 4, name: "Way too much", audio: "public/Al/cds/TheCitizenHotel/04 Way Too Much 1.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 5, name: "Old Ireland", audio: "public/Al/cds/TheCitizenHotel/05 Old Ireland 1.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 6, name: "Where all the music comes from", audio: "public/Al/cds/TheCitizenHotel/06 Where All The Music Comes From 1.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 7, name: "Everytime", audio: "public/Al/cds/TheCitizenHotel/07 Everytime 1.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 8, name: "You", audio: "public/Al/cds/TheCitizenHotel/08 You 1.mp3"}
+        cd.tracks.push(track);
+     
+
+        cds.push(cd);
+    }
+
+    {
+        let cd = {key: "If the sun dont rise", name:"If The Sun Don't Rise", tracks: new Array, imageSrc: "public/Al/cds/IfTheSunDontRise/If The Sun Don't Rise - cropped image.jpg",
+        editorial: "Watershed 1992 - where it all began" }
+
+
+        cd.tracks.push({number: 1, name: "Friendship and life", audio: "public/Al/cds/IfTheSunDontRise/01 friendship and life.mp3"});
+
+        var track = {number: 2, name: "I'll take you with me when I go", audio: "public/Al/cds/IfTheSunDontRise/02 i'll take u with me when i go.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 3, name: "If the sun don't rise", audio: "public/Al/cds/IfTheSunDontRise/03 if the sun don't rise.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 4, name: "I remember you", audio: "public/Al/cds/IfTheSunDontRise/04 i remember you.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 5, name: "Shift the balance", audio: "public/Al/cds/IfTheSunDontRise/05 shift the balance.mp3"}
+        cd.tracks.push(track);     
+
+        cds.push(cd);
+    }
+      // Eyes of eli Wallach
+      {
+        let cd = {key: "Eli", name:"The Eyes Of Eli Wallach", tracks: new Array, imageSrc: "public/Al/cds/TheEyesOfElilWallach/The Eyes Of Eli Wallach - cropped image.jpg",
+        editorial: "Watershed 2006" }
     
-        cd.tracks.push({number: 1, name: "Believe in Me", audio: "public/cds/Al/eli wallach/sample.mp3"});
-        console.log(cd.tracks);
+        cd.tracks.push({number: 1, name: "Believe in Me", audio: "public/Al/cds/TheEyesOfElilWallach/01 Believe in me.mp3"});
+    
+        cd.tracks.push( {number: 2, name: "Albert Einstein", audio: "public/Al/cds/TheEyesOfElilWallach/02 Albert Einstein.mp3"});
 
-        cd.tracks.push( {number: 2, name: "Albert Einstein", audio: "public/cds/Al/eli wallach/sample.mp3"});
-        //tracks.push(track);
-
-        var track = {number: 3, name: "Never Been Alone", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 3, name: "Never Been Alone", audio: "public/Al/cds/TheEyesOfElilWallach/03 Never been alone.mp3"}
         cd.tracks.push(track);
-        var track = {number: 4, name: "Nobody Else In Here", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 4, name: "Nobody Else In Here", audio: "public/Al/cds/TheEyesOfElilWallach/04 Nobody else in here.mp3"}
         cd.tracks.push(track);
-        var track = {number: 5, name: "Where All The Music Comes From", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 5, name: "Where All The Music Comes From", audio: "public/Al/cds/TheEyesOfElilWallach/05 Where all the music comes from.mp3"}
         cd.tracks.push(track);
-        var track = {number: 6, name: "Coming Through In Colour", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 6, name: "Coming Through In Colour", audio: "public/Al/cds/TheEyesOfElilWallach/06 Coming through in colour.mp3"}
         cd.tracks.push(track);
-        var track = {number: 7, name: "Living In The Gap", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 7, name: "Living In The Gap", audio: "public/Al/cds/TheEyesOfElilWallach/07 Living in the gap.mp3"}
         cd.tracks.push(track);
-        var track = {number: 8, name: "Nothing Moves Gently", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 8, name: "Nothing Moves Gently", audio: "public/Al/cds/TheEyesOfElilWallach/08 Nothing moves gently.mp3"}
         cd.tracks.push(track);
-        var track = {number: 9, name: "American Beauty", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 9, name: "American Beauty", audio: "public/Al/cds/TheEyesOfElilWallach/09 American beauty.mp3"}
         cd.tracks.push(track);
-        var track = {number: 10, name: "Lost Soul", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 10, name: "Lost Soul", audio: "public/Al/cds/TheEyesOfElilWallach/10 Lost soul.mp3"}
         cd.tracks.push(track);
-        var track = {number: 11, name: "Who Knows Me Well", audio: "public/cds/Al/eli wallach/sample.mp3"}
+        var track = {number: 11, name: "Who Knows Me Well", audio: "public/Al/cds/TheEyesOfElilWallach/11 Who knows me well.mp3"}
         cd.tracks.push(track);
-        var track = {number: 12, name: "Believe in Me", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track); 
-
-        
+       
         cds.push(cd);
 
     }
-    //tracks.length=0;
-    {
-        let cd = {key: "Desire", name:"Desire", tracks: new Array, imageSrc: "public/cds/Al/desire/Desire.jpg",
-        editorial: " Desire Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." }
-    
-        // Desire
-        cd.tracks.push({number: 1, name: "Hurricane", audio: "public/cds/Al/eli wallach/sample.mp3"});
-        
-        //tracks.push(track);
 
-        var track = {number: 2, name: "Isis", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
-        var track = {number: 3, name: "Mozambique", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
-        var track = {number: 4, name: "One More Cup Of Coffee", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
-        var track = {number: 5, name: "Oh Sister", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
-        var track = {number: 6, name: "Joey", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
-        var track = {number: 7, name: "Romance In Durango", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
-        var track = {number: 8, name: "Black Diamond Bay", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track);
-        var track = {number: 9, name: "Sara", audio: "public/cds/Al/eli wallach/sample.mp3"}
-        cd.tracks.push(track); 
-
-
-        cds.push(cd);
-
-    }    
+ 
 }
 
 function loadAudioSwimlane(dir)
