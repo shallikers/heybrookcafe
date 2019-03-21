@@ -1,0 +1,168 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <Title id="title">Heybrook Cafe</Title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+
+    </head>
+
+<style>
+
+    .dark_bg {
+        background-color: #5179aa;
+    }
+
+    .black_bg {
+        background-color: black;
+    }
+
+    .light_bg {
+        background-color: #c7dceb;
+    }
+
+    .transparency{ 
+        background-color: rgba(81, 121, 170, 0.5);
+    }
+
+    .light_txt {
+        color: white;
+    }
+
+    .dark_text {
+        color :  #5179aa;
+    }
+
+    .body {
+        width: 100%; 
+    }
+
+    .strong_text{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .heybrook-image{
+        height:250; 
+        width:100%
+    }
+    
+    .image_banner{
+        background-repeat: no-repeat;
+        background-image : url('public/images/Blue Bay Full.jpg');
+     
+        background-size : cover; 
+        background-position: center;
+        width: 100%;
+
+
+    }
+
+    .large_text{
+        font-size: 24px;
+    }
+ 
+    #navbar{
+        font-size: 12px;
+    }
+
+    #videoplayer{
+        padding: 0 ;
+    }
+
+   
+    .imbox{
+            width: 100%; 
+            padding: 10% 0px;
+        
+            
+            
+    }
+
+    @media only screen and (min-width: 600px){
+    /* CSS overrides */
+
+        #navbar{
+            font-size: 24px;
+        }
+        .large_text{
+            font-size: 32px;   
+
+        }
+         .image_banner{
+            background-repeat: no-repeat;
+            background-image : url('public/images/Blue Bay Letter Box.jpg');
+            background-size : cover;
+            width: 100%;
+        }
+        .heybrook-image{
+            height:300; 
+            width:100%
+        } 
+
+    }
+
+    
+    @media only screen and (min-width: 1024px){
+    /* CSS overrides */
+    }
+ 
+    
+    @media only screen and (min-width: 1366px){
+    /* CSS overrides */
+        .body{
+            width : 1366px;
+            margin: 0 auto;
+            background-color: whitesmoke;
+        }
+    } 
+</style>
+
+<body class="body">
+ 
+     <!-- navbar -->
+    <div id="navbar" class="w3-bar dark_bg light_txt large_text" >
+        <div class="w3-bar-item light_bg dark_text  " style="font-weight:bolder"> Heybrook Cafe :    </div>
+        <a href="index.html" class="w3-bar-item w3-button">Al</a>
+        <a href="Sam.html" class="w3-bar-item w3-button ">Sam</a>
+    </div>
+
+    <!-- Artist identifier and image -->
+    <div class="w3-display-container image_banner" >
+        <div class= "heybrook-image"> </div>
+        <div class="w3-display-bottomright transparency w3-text-white large_text" style="width:100%; text-align: center;">Sam Shalliker</div>     
+    </div >
+    
+    <div class="w3-cell-row  w3-mobile w3-cell-top">
+        <div class="w3-cell w3-cell-top dark_bg w3-mobile" style = "width:50%">
+                <img src ="public\Sam\IMG-20190316-WA0004cp.jpg" style = "width: 100%; padding: 5% "></img>        
+        </div>
+        <div class="w3-cell dark_bg w3-mobile w3-cell-top">
+            <img src ="public/Sam/IMG-20190316-WA0006.jpg" style = "width: 100%; padding: 5%  "></img>        
+        </div>
+    </div>
+
+    <div class="w3-cell-row w3-mobile">
+
+        <div class="w3-cell dark_bg w3-mobile w3-cell-top">
+            <img src ="public/Sam/IMG-20190316-WA0008.jpg" style = "width: 100%;  padding: 5%  "></img>        
+
+        </div>
+        <div class="w3-cell dark_bg w3-mobile w3-cell-top">
+            <img src ="public/Sam/IMG-20190316-WA0010.jpg" style = "width: 100%;  padding: 5%  "></img>           
+        </div>
+    </div>
+    <div class="w3-cell-row w3-mobile">
+        <div class="w3-cell dark_bg w3-mobile w3-cell-top " style = "width:50%">
+                <img src ="public/Sam/IMG-20190316-WA0007.jpg" style = "width: 100%;  padding: 5%  "></img>        
+        </div>
+        <div class="w3-cell dark_bg w3-cell-top w3-mobile" style = "width:50%">
+            <img src ="public/Sam/IMG-20190316-WA0005.jpg" style = "width: 100%;  padding: 5%  "></img>        
+        </div>
+    </div>
+</body>
+
