@@ -203,7 +203,7 @@
     
 
     <div class="light_bg w3-container">
-            <h3>Words from Al on the video</h3>
+            
             <p id="video editorial">Some sample text to prove that this is working</p>
         </div>
 <!-- Album Selector-->
@@ -423,6 +423,14 @@ function loadVideo(n)
 
 function loadvideodata()
 {
+    var video = { imageSrc:  "public/Al/videos/Hopeless heart.jpg", 
+                embedCode: '<iframe width="640" height="360" src="//www.youtube.com/embed/4qlnfRy1Ljo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                editorial: "<h3>Hopeless Heart blog. </h3>" + 
+                " <p> 'Hopeless Heart’ was written in December 2018 with friends who sadly left us during the year very much in mind. Linda Meagor, Steve Smallwood, Ian Boorer and others too. Living on in those who are left behind. This is a video bootleg of the song  which is due to feature on the Al’s planned solo album of 2019. </p>" + 
+                " <h3> Lyrics: Hopeless Heart </h3> <p>Remember how the day could break, </br> Everyone still smiling, nothing could be fake, </br> Cut me like a diamond with that I can make no mistake,</br> Everyone who leaves me, leaves with a hopeless heart.</br> Remember those who left to soon, </br> With half damp eyes I stare into the gloom,</br> Inside a golden temple, you’ll find me howling at the moon,</br> Everyone who leaves me, leaves me with a hopeless heart.</br></br>Oh darling where you rest,</br>A shoreless cosmic ocean, full of dreams of those who loved you best,</br>Oh darling there you lie,</br>Inside the sapphire of our mind, in the emerald of our eye.</br></br>Remember that very first day, </br>You pour me out a whisky, nothing we could say,</br>Hold me in your arms and help me make the pain go away,</br>Everyone who leaves me, leaves me with a hopeless heart.</br></br>Oh darling where you rest,</br>A shoreless cosmic ocean, full of dreams of those who loved you best,</br>Oh darling there you lie,</br>Inside the sapphire of our mind, in the emerald of our eye.</br></br>Once I could not be told,</br>In the blinking of an eye everyone gets old,</br>But now I know it’s different, I let myself fall into the fold.</br>Everyone who leaves me, leaves me with a hopeless heart.</br>Everyone who leaves me, leaves me with a hopeless heart.</br>Everyone who leaves me, leaves me with this hopeless song.</p>"
+                            
+            }
+    videos.push(video);
   
     var video = { imageSrc:  "public/Al/videos/Early Watershed.jpg", 
                 embedCode: '<iframe id="videoplayer" width="549" height="412" src="//www.youtube.com/embed/QK4rqLor3MU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',            
@@ -435,8 +443,10 @@ function loadvideodata()
                 editorial: 'Filmed live at the Thistle in Plymouth in memorial of Dave Gregory'
             }
     videos.push(video);
- 
 
+
+ 
+    
 }
 
 function initaudio()
@@ -501,8 +511,8 @@ function loadaudiodata(){
 
     // Bootlegs
         {
-            let cd = {key: "Bootlegs", name:"Bootlegs", tracks: new Array, imageSrc: "public/Al/cds/Bootlegs/Pictures 121.jpg",
-            editorial: "Covers and bootlegs." }
+            let cd = {key: "Bootlegs", name:"Bootlegs", tracks: new Array, imageSrc: "public/Al/cds/Bootlegs/BootlegsCover2.jpg",
+            editorial: "Bootlegs.  Tasters of Als new solo albumm cominig in 2019." }
         
             cd.tracks.push({number: 1, name: "Bootleg of Hopeless Heart", audio: "public/Al/cds/Bootlegs/Hopeless 5.mp3"});
             console.log(cd.tracks);
@@ -602,7 +612,7 @@ function loadaudiodata(){
 
     {
         let cd = {key: "If the sun dont rise", name:"If The Sun Don't Rise", tracks: new Array, imageSrc: "public/Al/cds/IfTheSunDontRise/If The Sun Don't Rise - cropped image.jpg",
-        editorial: "Watershed 1992 - where it all began" }
+        editorial: "If The Sun Don’t Rise was recorded in the early years of Watershed and features songs performed as part of the live set in the early 1990s. Featuring Jo Atkins on vocals, Mark Flack on bass, Tony Gullis on drums, Dave Gregory on keys and Al Shalliker on guitar and vocals, this was the line-up that created Watershed’s distinctive, early, reggae based sound. Recorded at Liverpool Music House near the Albert Dock, Liverpool in early 1992 this was the first recording Watershed managed to release on the relatively new cd format! " }
 
 
         cd.tracks.push({number: 1, name: "Friendship and life", audio: "public/Al/cds/IfTheSunDontRise/01 friendship and life.mp3"});
