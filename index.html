@@ -423,7 +423,14 @@ function loadVideo(n)
 
 function loadvideodata()
 {
-    var video = { imageSrc:  "public/Al/videos/Hopeless heart.jpg", 
+    var video = { imageSrc:  "public/Al/videos/BackToTheGround.jpg", 
+                embedCode: '<iframe width="749" height="421" src="//www.youtube.com/embed/1jjh5ULsqkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                editorial: "<h3>Back to the ground blog. </h3>" + 
+                " <p> 'Back to the ground’ was written in February 2019 "
+            }
+            videos.push(video);
+
+   var video = { imageSrc:  "public/Al/videos/Hopeless heart.jpg", 
                 embedCode: '<iframe width="640" height="360" src="//www.youtube.com/embed/4qlnfRy1Ljo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
                 editorial: "<h3>Hopeless Heart blog. </h3>" + 
                 " <p> 'Hopeless Heart’ was written in December 2018 with friends who sadly left us during the year very much in mind. Linda Meagor, Steve Smallwood, Ian Boorer and others too. Living on in those who are left behind. This is a video bootleg of the song  which is due to feature on the Al’s planned solo album of 2019. </p>" + 
@@ -553,6 +560,25 @@ function loadaudiodata(){
 
         cds.push(cd);
     }
+
+    {
+        // Not what I have found
+        let cd = {key: "NotWhatIveFound", name:"Not What I've Found", tracks: new Array, imageSrc: "public/Al/cds/NotWhatIveFound/Not What I've Found.jpg",
+        editorial: "Not What Ive Found" }
+
+        cd.tracks.push({number: 1, name: "Falling Down", audio: "public/Al/cds/NotWhatIveFound/01 Falling Down.mp3"});
+
+        var track = {number: 2, name: "The Look Of A Hologram", audio: "public/Al/cds/NotWhatIveFound/02 The Look Of A Hologram.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 3, name: "Who Knows Me Well", audio: "public/Al/cds/NotWhatIveFound/03 Who Knows Me Well.mp3"}
+        cd.tracks.push(track);
+        var track = {number: 4, name: "Bird", audio: "public/Al/cds/NotWhatIveFound/04 Bird.mp3"}
+        cd.tracks.push(track);
+        
+        cds.push(cd);
+    }
+
+
     {
         // Strange Days And Dynamite
         let cd = {key: "StrangeDays", name:"Strange Days And Dynamite", tracks: new Array, imageSrc: "public/Al/cds/StrangeDaysAndDynamite/Strange Days And Dynamite - cropped image.jpg",
